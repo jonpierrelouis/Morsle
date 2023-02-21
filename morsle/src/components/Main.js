@@ -32,11 +32,11 @@ const Main = () => {
 
         {/* div showing list of letters and if they are corret or not */}
         <div>
-          <Letter expected={`${wordOfTheDay[0]}`} actual={`${inputArray[0]}`}></Letter>
-          <Letter expected={`${wordOfTheDay[1]}`} actual={`${inputArray[1]}`}></Letter>
-          <Letter expected={`${wordOfTheDay[2]}`} actual={`${inputArray[2]}`}></Letter>
-          <Letter expected={`${wordOfTheDay[3]}`} actual={`${inputArray[3]}`}></Letter>
-          <Letter expected={`${wordOfTheDay[4]}`} actual={`${inputArray[4]}`}></Letter>
+          <Letter expected={`${wordOfTheDay[0]}`} actual={`${inputArray[0]}`} arr={wordOfTheDay}></Letter>
+          <Letter expected={`${wordOfTheDay[1]}`} actual={`${inputArray[1]}`} arr={wordOfTheDay}></Letter>
+          <Letter expected={`${wordOfTheDay[2]}`} actual={`${inputArray[2]}`} arr={wordOfTheDay}></Letter>
+          <Letter expected={`${wordOfTheDay[3]}`} actual={`${inputArray[3]}`} arr={wordOfTheDay}></Letter>
+          <Letter expected={`${wordOfTheDay[4]}`} actual={`${inputArray[4]}`} arr={wordOfTheDay}></Letter>
         </div>
       </div>
     </>
