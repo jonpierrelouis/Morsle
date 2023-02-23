@@ -35,11 +35,11 @@ const Main = () => {
         </form>
 
         {/* div showing list of letters and if they are corret or not */}
-        {wordAttempt >= 0 && <Letters wordOfTheDay={wordOfTheDay} inputArray={inputArray[0]}></Letters>}
-        {wordAttempt >= 1 && <Letters wordOfTheDay={wordOfTheDay} inputArray={inputArray[1]}></Letters>}
+        {wordAttempt >= 0 && <Letters wordOfTheDay={wordOfTheDay} inputArray={inputArray[4]}></Letters>}
+        {wordAttempt >= 1 && <Letters wordOfTheDay={wordOfTheDay} inputArray={inputArray[3]}></Letters>}
         {wordAttempt >= 2 && <Letters wordOfTheDay={wordOfTheDay} inputArray={inputArray[2]}></Letters>}
-        {wordAttempt >= 3 && <Letters wordOfTheDay={wordOfTheDay} inputArray={inputArray[3]}></Letters>}
-        {wordAttempt >= 4 && <Letters wordOfTheDay={wordOfTheDay} inputArray={inputArray[4]}></Letters>}
+        {wordAttempt >= 3 && <Letters wordOfTheDay={wordOfTheDay} inputArray={inputArray[1]}></Letters>}
+        {wordAttempt >= 4 && <Letters wordOfTheDay={wordOfTheDay} inputArray={inputArray[0]}></Letters>}
       </div>
     </>
   )
