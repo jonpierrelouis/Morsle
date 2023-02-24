@@ -4,15 +4,23 @@ import Letters from "./Letters";
 const Main = () => {
   const wordOfTheDay = ['B','R','E','A','D'];
   const [word, setWord] = useState('');    
-  const [inputArray, setInputArray] = useState([]);
-  let inputArr = ["","","","",""];
+  const [inputArray0, setInputArray0] = useState([]);
+  const [inputArray1, setInputArray1] = useState([]);
+  const [inputArray2, setInputArray2] = useState([]);
+  const [inputArray3, setInputArray3] = useState([]);
+  const [inputArray4, setInputArray4] = useState([]);
+ 
   const [wordAttempt, setWordAttemp] = useState(0);
 
   const onSubmit = (e) => {
     e.preventDefault();
+    
+    if(wordAttempt === 0){setInputArray0(word.split(''))}
+    else if(wordAttempt === 1){setInputArray1(word.split(''))}
+    else if(wordAttempt === 2){setInputArray2(word.split(''))}
+    else if(wordAttempt === 3){setInputArray3(word.split(''))}
+    else if(wordAttempt === 4){setInputArray4(word.split(''))}
 
-    inputArr[wordAttempt] = word;
-    setInputArray(inputArr);
     setWordAttemp(wordAttempt + 1);
 
     setWord('');
@@ -20,10 +28,13 @@ const Main = () => {
 
   useEffect(() => {
     
-    // console.log(word)
-    console.log(inputArray)
+    // console.log(inputArray0, inputArray1, inputArray2, inputArray3, inputArray4)
     
-  }, [inputArray])
+  }, [inputArray0, inputArray1, inputArray2, inputArray3, inputArray4])
+
+    // useEffect(() => {
+      
+    // }, [])
 
   return (
     <>
@@ -35,11 +46,11 @@ const Main = () => {
         </form>
 
         {/* div showing list of letters and if they are corret or not */}
-        {wordAttempt >= 0 && <Letters wordOfTheDay={wordOfTheDay} inputArray={inputArray[4]}></Letters>}
-        {wordAttempt >= 1 && <Letters wordOfTheDay={wordOfTheDay} inputArray={inputArray[3]}></Letters>}
-        {wordAttempt >= 2 && <Letters wordOfTheDay={wordOfTheDay} inputArray={inputArray[2]}></Letters>}
-        {wordAttempt >= 3 && <Letters wordOfTheDay={wordOfTheDay} inputArray={inputArray[1]}></Letters>}
-        {wordAttempt >= 4 && <Letters wordOfTheDay={wordOfTheDay} inputArray={inputArray[0]}></Letters>}
+        {wordAttempt >= 4 && <Letters wordOfTheDay={wordOfTheDay} inputArray={inputArray4}></Letters>}
+        {wordAttempt >= 3 && <Letters wordOfTheDay={wordOfTheDay} inputArray={inputArray3}></Letters>}
+        {wordAttempt >= 2 && <Letters wordOfTheDay={wordOfTheDay} inputArray={inputArray2}></Letters>}
+        {wordAttempt >= 1 && <Letters wordOfTheDay={wordOfTheDay} inputArray={inputArray1}></Letters>}
+        {wordAttempt >= 0 && <Letters wordOfTheDay={wordOfTheDay} inputArray={inputArray0}></Letters>}
       </div>
     </>
   )
