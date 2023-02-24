@@ -1,7 +1,7 @@
 import Letter from "./Letter"
 
 const Letters = ({wordOfTheDay, inputArray, count}) => {
-  // console.log(inputArray)
+  
   return (
     <div>
       <Letter expected={`${wordOfTheDay[0]}`} actual={`${inputArray[0]}`} arr={wordOfTheDay}></Letter>

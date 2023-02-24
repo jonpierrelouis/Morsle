@@ -17,3 +17,11 @@
   border: 1px solid black;
   padding: 20px;
 }
+
+.center {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+  text-align: center;
+}
+
