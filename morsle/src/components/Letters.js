@@ -1,6 +1,6 @@
 import Letter from "./Letter"
 
-const Letters = ({wordOfTheDay, inputArray, count}) => {
+const Letters = ({wordOfTheDay, inputArray}) => {
   
   return (
     <div>

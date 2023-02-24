@@ -31,15 +31,21 @@ const Main = () => {
     }
 
     setWord('');
+    
   }
 
   return (
     <div className="container">
-      {/* Submission form */}
-      <form onSubmit={onSubmit}>
-        <input type="text" placeholder="Enter Word Here" minLength={5} maxLength={5} onChange={(e) => setWord(e.target.value.toUpperCase())}/>
-        <input type="submit" />
-      </form>
+      <h2 className="center">Morsle</h2>
+      {/* Show input by default, then show if player won/lost at end of game conditions happen */}
+      {
+        (!gameWon && wordAttempt >= 5) ? <div className="center">You Lost!</div> 
+        : (gameWon && wordAttempt < 5) ? <div className="center">You Won!</div>
+        : <form onSubmit={onSubmit}>
+            <input type="text" placeholder="Enter Word Here" minLength={5} maxLength={5} onChange={(e) => setWord(e.target.value.toUpperCase())}/>
+            <input type="submit" />
+          </form>
+      }
 
       {/* div showing list of letters and if they are corret or not */}
       { wordAttempt >= 4 && <Letters wordOfTheDay={wordOfTheDay} inputArray={inputArray4}></Letters>}
