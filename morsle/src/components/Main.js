@@ -42,7 +42,7 @@ const Main = () => {
         (!gameWon && wordAttempt >= 5) ? <div className="center">You Lost!</div> 
         : (gameWon && wordAttempt < 5) ? <div className="center">You Won!</div>
         : <form onSubmit={onSubmit}>
-            <input type="text" placeholder="Enter Word Here" minLength={5} maxLength={5} onChange={(e) => setWord(e.target.value.toUpperCase())}/>
+            <input type="text" placeholder="Enter Word Here" minLength={5} maxLength={5} value={word} onChange={(e) => setWord(e.target.value.toUpperCase())}/>
             <input type="submit" />
           </form>
       }
