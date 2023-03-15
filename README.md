@@ -7,4 +7,4 @@ Currently, this project has one hardcoded word as the answer. A good addition to
 Clone the repository:
 ```
 git clone https://github.com/jonpierrelouis/Morsle.git
-``
+```
